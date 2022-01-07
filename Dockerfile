@@ -1,4 +1,3 @@
-# FROM golang:1.14.6-scratch AS build
 FROM golang:1.16-stretch AS build
 WORKDIR /src
 RUN go mod init out
