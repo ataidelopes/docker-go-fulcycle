@@ -5,6 +5,8 @@ COPY src/main.go .
 
 RUN CGO_ENABLED=0 GOOS=linux go build -a -o go-fulcycle .
 
+#criando build antes de rodar a imagem
+
 FROM scratch
 COPY --from=build /src .
 ENTRYPOINT [ "./go-fulcycle" ]
